@@ -23,11 +23,11 @@ UdukFretboard8 = function(x, y) {
 	shape.fillColor = '#ffffff';
 	shape.strokeColor = 'black';
 
-  /* 1st */
-	var rectangle2 = new Rectangle(new Point(this.posX-16, this.posY), new Size(16, height));
-	var shape2 = new Shape.Rectangle(rectangle2);
-	shape2.fillColor = 'grey';
-	shape2.strokeColor = 'black';
+  /* Nut */
+	var nut = new Rectangle(new Point(this.posX-16, this.posY), new Size(16, height));
+	var nut1 = new Shape.Rectangle(nut);
+	nut1.fillColor = 'grey';
+	nut1.strokeColor = 'black';
 
 	/* last */
 	var rectangle3 = new Rectangle(new Point(width+this.posX, this.posY), new Size(6, height));
@@ -200,9 +200,10 @@ drawSeq8 = function(seq, marker) {
 };
 
 drawBlock8 = function(start, n) {
-  var block = new Rectangle(new Point(this.posX+(40 * (start-1)), this.posY), new Size(40 * n, 210));
-	var b = new Shape.Rectangle(block);
-	b.fillColor = '#0f6060';
-	b.opacity = 0.16;
+  var r = new Rectangle(new Point(this.posX+(40 * (start-1)), this.posY), new Size(40 * n, 210));
+	var block = new Shape.Rectangle(r);
+	block.fillColor = '#0f6060';
+	block.opacity = 0.16;
+  return block;
 };
 
