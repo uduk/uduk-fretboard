@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="paper-full.min.js"></script>
+<script type="text/javascript" src="../uduk-core/sequence.js"></script>
+<script type="text/paperscript" src="fretboard6.js" canvas="Canvas6"></script>
+<script type="text/paperscript" src="fretboard7.js" canvas="Canvas7"></script>
+<script type="text/paperscript" src="fretboard8.js" canvas="Canvas8"></script>
+
+<script type="text/paperscript" canvas="Canvas6">
+  UdukFretboard6(100, 100);
+  drawNote6(6, 7, "1");
+  drawSeq6(509, "3");
+  //animateSequence6(sequence);
+  drawBlock6(7, 3);
+</script>
+
+<script type="text/paperscript" canvas="Canvas7">
+  UdukFretboard7(100, 100);
+  drawNote7(7, 2, "1");
+  drawSeq7(703, "2");
+  drawBlock7(2, 2);
+</script>
+
+<script type="text/paperscript" canvas="Canvas8">
+  UdukFretboard8(100, 100);
+  drawNote8(8, 3, "1");
+  drawSeq8(805, "3");
+  drawBlock8(3, 3);
+</script>
+
+</head>
+  <body>
+    <canvas id="Canvas6" width="1100" height="380" style="border:1px solid #333333;"></canvas>
+    <canvas id="Canvas7" width="1100" height="380" style="border:1px solid #333333;"></canvas>
+    <canvas id="Canvas8" width="1100" height="380" style="border:1px solid #333333;"></canvas>
+  </body>
+</html>

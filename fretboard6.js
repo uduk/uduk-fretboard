@@ -6,13 +6,10 @@
 *
 */
 
-// poweed by fixed pos
-// change string tuning
-
 var posX = 100;
 var posY = 100;
 
-UdukFretboard = function(x, y) {
+UdukFretboard6 = function(x, y) {
 
   var width = 960;
   var height = 150;
@@ -25,13 +22,6 @@ UdukFretboard = function(x, y) {
 	var shape = new Shape.Rectangle(rectangle);
 	shape.fillColor = '#ffeeb1' //ddd //fff;
 	shape.strokeColor = 'black';
-
-	/* block tmp TODO*/
-	var block = new Rectangle(new Point(this.posX+(40*11), this.posY), new Size(160, 150));
-	var b = new Shape.Rectangle(block);
-	b.fillColor = '#0f6060' //ddd //fff;
-	b.opacity = 0.2;
-
 
   /* 1st */
 	var rectangle2 = new Rectangle(new Point(this.posX-16, this.posY), new Size(16, height));
@@ -126,7 +116,7 @@ UdukFretboard = function(x, y) {
 	myCircle.fillColor = 'black';
 
 	// Powered: 
-	var text = new PointText(100, 20);
+	var text = new PointText(80, 20);
 	text.content = 'http://uduk.org';
 	text.style = {
 						fontFamily: 'Silom',
@@ -139,7 +129,7 @@ UdukFretboard = function(x, y) {
 };
 
 // todo: range check
-drawNote = function(s, f, marker) {
+drawNote6 = function(s, f, marker) {
 
   // strings --- this.posY + (i - 1) * 30
 	// 1 = this.posY + 0  
@@ -172,7 +162,7 @@ drawNote = function(s, f, marker) {
 
 };
 
-drawSeq = function(seq, marker) {
+drawSeq6 = function(seq, marker) {
 
   // strings --- this.posY + (i - 1) * 30
 	// 1 = this.posY + 0  
@@ -207,5 +197,12 @@ drawSeq = function(seq, marker) {
 		ntext.fillColor = 'white';
 		ntext.content = marker;
 
+};
+
+drawBlock6 = function(start, n) {
+  var block = new Rectangle(new Point(this.posX+(40 * (start-1)), this.posY), new Size(40 * n, 150));
+	var b = new Shape.Rectangle(block);
+	b.fillColor = '#0f6060';
+	b.opacity = 0.16;
 };
 

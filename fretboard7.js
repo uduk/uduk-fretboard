@@ -9,7 +9,7 @@
 var posX = 100;
 var posY = 100;
 
-UdukFretboard = function(x, y) {
+UdukFretboard7 = function(x, y) {
 
   var width = 960;
   var height = 180;
@@ -20,7 +20,7 @@ UdukFretboard = function(x, y) {
   /* Rectangle */
 	var rectangle = new Rectangle(new Point(this.posX, this.posY), new Size(width, height));
 	var shape = new Shape.Rectangle(rectangle);
-	shape.fillColor = '#ddd';
+	shape.fillColor = '#f5f5f5';
 	shape.strokeColor = 'black';
 
   /* 1st */
@@ -116,7 +116,7 @@ UdukFretboard = function(x, y) {
 	myCircle.fillColor = 'black';
 
 	// Powered: 
-	var text = new PointText(100, 20);
+	var text = new PointText(80, 20);
 	text.content = 'http://uduk.org';
 	text.style = {
 						fontFamily: 'Silom',
@@ -129,7 +129,7 @@ UdukFretboard = function(x, y) {
 };
 
 // todo: range check
-drawNote = function(s, f, marker) {
+drawNote7 = function(s, f, marker) {
 
   // strings --- this.posY + (i - 1) * 30
 	// 1 = this.posY + 0  
@@ -162,7 +162,7 @@ drawNote = function(s, f, marker) {
 
 };
 
-drawSeq = function(seq, marker) {
+drawSeq7 = function(seq, marker) {
 
   // strings --- this.posY + (i - 1) * 30
 	// 1 = this.posY + 0  
@@ -197,5 +197,12 @@ drawSeq = function(seq, marker) {
 		ntext.fillColor = 'white';
 		ntext.content = marker;
 
+};
+
+drawBlock7 = function(start, n) {
+  var block = new Rectangle(new Point(this.posX+(40 * (start-1)), this.posY), new Size(40 * n, 180));
+	var b = new Shape.Rectangle(block);
+	b.fillColor = '#0f6060';
+	b.opacity = 0.16;
 };
 
