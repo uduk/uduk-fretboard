@@ -151,7 +151,10 @@ drawNote6 = function(s, f, marker) {
 	path.style = {
 			fillColor: '#ff6060',
 			strokeColor: 'black',
-			strokeWidth: 1
+			strokeWidth: 1,
+      shadowColor: new Color(0, 0, 0),
+      shadowBlur: 12,
+      shadowOffset: new Point(5, 5)
 	};
 
 	// marker
@@ -188,8 +191,12 @@ drawSeq6 = function(seq, marker) {
 	path.style = {
 			fillColor: '#ff6060',
 			strokeColor: 'black',
-			strokeWidth: 1
+			strokeWidth: 1,
+      shadowColor: new Color(0, 0, 0),
+      shadowBlur: 12,
+      shadowOffset: new Point(5, 5)
 	};
+
 
 	// marker
 	var ntext = new PointText(new Point(fret, string+4));
