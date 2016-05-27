@@ -147,8 +147,8 @@ drawNote6 = function(s, f, marker) {
 	var string = this.posY + (s - 1) * 30;
 	var fret = this.posX + 20 + (f - 1) * 40;
 
-	var path = new Path.Circle(new Point(fret, string), 8);
-	path.style = {
+	var circle = new Path.Circle(new Point(fret, string), 8);
+	circle.style = {
 			fillColor: '#ff6060',
 			strokeColor: 'black',
 			strokeWidth: 1,
@@ -158,11 +158,13 @@ drawNote6 = function(s, f, marker) {
 	};
 
 	// marker
-	var ntext = new PointText(new Point(fret, string+4));
-		ntext.justification = 'center';
-		ntext.fillColor = 'white';
-		ntext.content = marker;
+	var text = new PointText(new Point(fret, string+4));
+		text.justification = 'center';
+		text.fillColor = 'white';
+		text.content = marker;
 
+  var group = new Group([circle, text]);
+  return group;
 };
 
 drawSeq6 = function(seq, marker) {
@@ -187,8 +189,8 @@ drawSeq6 = function(seq, marker) {
 	var string = this.posY + (s - 1) * 30;
 	var fret = this.posX + 20 + (f - 1) * 40;
 
-	var path = new Path.Circle(new Point(fret, string), 8);
-	path.style = {
+	var circle = new Path.Circle(new Point(fret, string), 8);
+	circle.style = {
 			fillColor: '#ff6060',
 			strokeColor: 'black',
 			strokeWidth: 1,
@@ -199,11 +201,13 @@ drawSeq6 = function(seq, marker) {
 
 
 	// marker
-	var ntext = new PointText(new Point(fret, string+4));
-		ntext.justification = 'center';
-		ntext.fillColor = 'white';
-		ntext.content = marker;
+	var text = new PointText(new Point(fret, string+4));
+		text.justification = 'center';
+		text.fillColor = 'white';
+		text.content = marker;
 
+  var group = new Group([circle, text]);
+  return group;
 };
 
 drawBlock6 = function(start, n) {

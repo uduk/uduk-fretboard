@@ -20,7 +20,7 @@ UdukFretboard7 = function(x, y) {
   /* Rectangle */
 	var rectangle = new Rectangle(new Point(this.posX, this.posY), new Size(width, height));
 	var shape = new Shape.Rectangle(rectangle);
-	shape.fillColor = '#f5f5f5';
+	shape.fillColor = '#F4A460';
 	shape.strokeColor = 'black';
 
   /* Nut */
@@ -147,8 +147,8 @@ drawNote7 = function(s, f, marker) {
 	var string = this.posY + (s - 1) * 30;
 	var fret = this.posX + 20 + (f - 1) * 40;
 
-	var path = new Path.Circle(new Point(fret, string), 8);
-	path.style = {
+	var circle = new Path.Circle(new Point(fret, string), 8);
+	circle.style = {
 			fillColor: '#ff6060',
 			strokeColor: 'black',
 			strokeWidth: 1,
@@ -158,11 +158,13 @@ drawNote7 = function(s, f, marker) {
 	};
 
 	// marker
-	var ntext = new PointText(new Point(fret, string+4));
-		ntext.justification = 'center';
-		ntext.fillColor = 'white';
-		ntext.content = marker;
+	var text = new PointText(new Point(fret, string+4));
+		text.justification = 'center';
+		text.fillColor = 'white';
+		text.content = marker;
 
+  var group = new Group([circle, text]);
+  return group;
 };
 
 drawSeq7 = function(seq, marker) {
@@ -187,8 +189,8 @@ drawSeq7 = function(seq, marker) {
 	var string = this.posY + (s - 1) * 30;
 	var fret = this.posX + 20 + (f - 1) * 40;
 
-	var path = new Path.Circle(new Point(fret, string), 8);
-	path.style = {
+	var circle = new Path.Circle(new Point(fret, string), 8);
+	circle.style = {
 			fillColor: '#ff6060',
 			strokeColor: 'black',
 			strokeWidth: 1,
@@ -198,11 +200,13 @@ drawSeq7 = function(seq, marker) {
 	};
 
 	// marker
-	var ntext = new PointText(new Point(fret, string+4));
-		ntext.justification = 'center';
-		ntext.fillColor = 'white';
-		ntext.content = marker;
+	var text = new PointText(new Point(fret, string+4));
+		text.justification = 'center';
+		text.fillColor = 'white';
+		text.content = marker;
 
+  var group = new Group([circle, text]);
+  return group;
 };
 
 drawBlock7 = function(start, n) {
