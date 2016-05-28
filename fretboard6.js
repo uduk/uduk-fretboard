@@ -53,7 +53,6 @@ UdukFretboard6 = function(x, y) {
 		var text = new PointText(new Point(z, this.posY + height + 30));
 		text.justification = 'center';
 		text.fontFamily = 'Silom';
-		text.fontWeight = 'bold';
 		text.fillColor = 'black';
 		text.content = i + '';
 
@@ -61,7 +60,6 @@ UdukFretboard6 = function(x, y) {
 		var text2 = new PointText(new Point(z, this.posY - 20));
 		text2.justification = 'center';
 		text2.fontFamily = 'Silom';
-		//text2.fontWeight = 'bold';
 		text2.fillColor = 'black';
 		text2.content = i + '';
 	}
