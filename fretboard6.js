@@ -4,16 +4,14 @@ o   o o-o   o   o o  o
 |   | |  \  |   | | /  
 |   | |   O |   | OO   
 |   | |  /  |   | | \  
- o-o  o-o    o-o  o  o  FretBoard
+ o-o  o-o    o-o  o  o  FretBoard 6
 
 */
 
-UdukFretboard6 = function(x, y, tuning) {
+UdukFretboard6 = function(posX, posY, tuning) {
 
   var width = 960;
   var height = 150;
-  posX = x;
-  posY = y;
 
   /* Rectangle */
   var rectangle = new Rectangle(new Point(posX, posY), new Size(width, height));
@@ -54,11 +52,11 @@ UdukFretboard6 = function(x, y, tuning) {
     bottom.content = i + '';
 
     /* Top */
-    var text2 = new PointText(new Point(z, posY - 20));
-    text2.justification = 'center';
-    text2.fontFamily = 'Silom';
-    text2.fillColor = 'black';
-    text2.content = i + '';
+    var top = new PointText(new Point(z, posY - 20));
+    top.justification = 'center';
+    top.fontFamily = 'Silom';
+    top.fillColor = 'black';
+    top.content = i + '';
   }
 
   /* String */
