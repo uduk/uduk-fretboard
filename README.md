@@ -6,12 +6,13 @@ o   o o-o   o   o o  o
 |   | |   O |   | OO   
 |   | |  /  |   | | \  
  o-o  o-o    o-o  o  o 
- 
+</pre
+
+```javascript
 <script type="text/paperscript" src="fretboard6.js" canvas="Canvas6"></script>
 <script type="text/paperscript" src="fretboard7.js" canvas="Canvas7"></script>
 <script type="text/paperscript" src="fretboard8.js" canvas="Canvas8"></script>
-</pre>
-
+```
 Example usage:
 
 ```javascript
@@ -42,7 +43,6 @@ Example usage:
  <canvas id="Canvas8" width="1100" height="380" style="border:1px solid #333333;"></canvas>
 ...
 ```
-</pre>
 
 Direct drawing [x, y] measurement 
 
