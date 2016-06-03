@@ -2,16 +2,16 @@
 <html>
 <head>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
-<script type="text/javascript" src="../uduk-core/sequence.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/uduk/uduk-core/master/sequence.js"></script>
 <script type="text/paperscript" src="fretboard6.js" canvas="Canvas6"></script>
 <script type="text/paperscript" src="fretboard7.js" canvas="Canvas7"></script>
 <script type="text/paperscript" src="fretboard8.js" canvas="Canvas8"></script>
 
 <script type="text/paperscript" canvas="Canvas6">
-  UdukFretboard6(100, 100);
-  drawNote6(6, 7, "1");
-  drawSeq6(509, "3");
-  var block = drawBlock6(20, 5);
+  var f = UdukFretboard6(100, 100, ["e", "B", "G", "D", "A", "E"]);
+  drawNote6(f, 6, 7, "1");
+  drawSeq6(f, 509, "3");
+  var block = drawBlock6(f, 20, 5);
   //block.remove();
 </script>
 
