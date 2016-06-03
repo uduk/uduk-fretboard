@@ -98,7 +98,7 @@ UdukFretboard6 = function(posX, posY, tuning) {
   var myCircle = new Path.Circle(new Point(460+posX, 106+posY), 10);
   myCircle.fillColor = 'grey';
 
-  /*	24 */
+  /* 24 */
   var myCircle = new Path.Circle(new Point(940+posX, 46+posY), 10);
   myCircle.fillColor = 'black';
   var myCircle = new Path.Circle(new Point(940+posX, 106+posY), 10);
