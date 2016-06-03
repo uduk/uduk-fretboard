@@ -85,11 +85,11 @@ UdukFretboard6 = function(x, y, tuning) {
   var d1 = 100;
   var d2 = 580;
   for (var i = 1; i < 5; i++, d1 += 80, d2 += 80) {
-    // 3, 5, 7, 9
+    /* 3, 5, 7, 9 */
     var myCircle = new Path.Circle(new Point(d1+posX, 76+posY), 10);
     myCircle.fillColor = 'grey';
 
-    // 15. 17, 19, 21
+    /* 15. 17, 19, 21 */
     var myCircle = new Path.Circle(new Point(d2+posX, 76+posY), 10);
     myCircle.fillColor = 'grey';
   }
