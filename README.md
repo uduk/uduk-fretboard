@@ -44,8 +44,8 @@ Example usage:
 ...
 ```
 ---
-Direct drawing into the canvas, [x, y] function:
+Direct drawing into the canvas, [string, fret] function:
 
-Strings = posY + (i - 1) * 30<br>
+String = posY + (i - 1) * 30<br>
 Fret = posX + 20 + (i - 1) *  40<br>
 
