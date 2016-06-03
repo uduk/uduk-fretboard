@@ -44,7 +44,7 @@ Example usage:
 ---
 Direct drawing into the canvas, [x, y] positioning:
 
-1. Strings --- posY + (i - 1) * 30<br>
+1. Strings --- posY + (i - 1) * 30
 1 = posY + 0<br>  
 2 = posY + 30<br> 
 3 = posY + 60<br> 
@@ -52,7 +52,7 @@ Direct drawing into the canvas, [x, y] positioning:
 5 = posY + 120<br>
 6 = posY + 150<br>
 <br>
-2. Fret -- posX + 20 + (i - 1) *  40<br>
+2. Fret -- posX + 20 + (i - 1) *  40
 0 -<br>
 1 - posX + 20<br>
 2 - posX + 20 + 40<br>
