@@ -1,4 +1,4 @@
-Uduk Fretboard
+Uduk Fretboard, a very simple guitar fretboard
 
 ```javascript
 o   o o-o   o   o o  o 
