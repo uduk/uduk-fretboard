@@ -72,7 +72,7 @@ UdukFretboard7 = function(posX, posY, tuning) {
   /* String tuning */
   for(var i = 0; i < tuning.length; i++) 
   {
-    var y = i * 30;
+    var y = (i + 1) * 30;
     var text = new PointText(new Point(posX - 40, (y+posY) - 30 ));
     text.justification = 'center';
     text.fontFamily = 'Silom';
