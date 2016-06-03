@@ -49,3 +49,4 @@ Direct drawing into the canvas, [string, fret] function:
 String = posY + (i - 1) * 30<br>
 Fret = posX + 20 + (i - 1) *  40<br>
 
+(*) Once the fretboard has been initiated, it will return an array containing [posX, posY]
