@@ -17,8 +17,10 @@ Example usage:
 <script type="text/paperscript" canvas="Canvas6">
   var f = UdukFretboard6(100, 100, ["e", "B", "G", "D", "A", "E"]);
   var n = drawNote6(f, 6, 7, "1");
+  //n.remove();
   var nn = drawSeq6(f, 509, "3");
   var block = drawBlock6(f, 1, 4);
+  //block.remove();
 </script>
 
 <script type="text/paperscript" canvas="Canvas7">
