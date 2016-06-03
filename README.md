@@ -16,23 +16,23 @@ Example usage:
 ```javascript
 <script type="text/paperscript" canvas="Canvas6">
   var f = UdukFretboard6(100, 100, ["e", "B", "G", "D", "A", "E"]);
-  var n = drawNote6(f, 6, 7, "1");
+  var n = drawNote6(f, 4, 4, "1");
   //n.remove();
-  var nn = drawSeq6(f, 509, "3");
+  var nn = drawSeq6(f, 505, "3");
   var block = drawBlock6(f, 1, 4);
   //block.remove();
 </script>
 
 <script type="text/paperscript" canvas="Canvas7">
   var f = UdukFretboard7(100, 100, ["e", "B", "G", "D", "A", "E", "(B)"]);
-  var n = drawNote7(f, 7, 2, "1");
-  var nn = drawSeq7(f, 703, "2");
+  var n = drawNote7(f, 7, 7, "1");
+  var nn = drawSeq7(f, 700, "2");
   var block = drawBlock7(f, 1, 4);
 </script>
 
 <script type="text/paperscript" canvas="Canvas8">
   var f = UdukFretboard8(100, 100, ["e", "B", "G", "D", "A", "E", "(B)", "(Gb)"]);
-  var n = drawNote8(f, 8, 3, "1");
+  var n = drawNote8(f, 8, 8, "1");
   var nn = drawSeq8(f, 805, "3");
   var block = drawBlock8(f, 1, 4);
 </script>
