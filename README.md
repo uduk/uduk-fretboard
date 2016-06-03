@@ -1,14 +1,12 @@
 Uduk Fretboard
 
-<pre>
+```javascript
 o   o o-o   o   o o  o 
 |   | |  \  |   | | /  
 |   | |   O |   | OO   
 |   | |  /  |   | | \  
  o-o  o-o    o-o  o  o 
-</pre
 
-```javascript
 <script type="text/paperscript" src="fretboard6.js" canvas="Canvas6"></script>
 <script type="text/paperscript" src="fretboard7.js" canvas="Canvas7"></script>
 <script type="text/paperscript" src="fretboard8.js" canvas="Canvas8"></script>
@@ -46,7 +44,6 @@ Example usage:
 
 Direct drawing [x, y] measurement 
 
-<pre>
   // Strings --- posY + (i - 1) * 30
   // 1 = posY + 0  
   // 2 = posY + 30 
@@ -59,4 +56,3 @@ Direct drawing [x, y] measurement
   // 0 -
   // 1 - posX + 20
   // 2 - posX + 20 + 40
-<pre>
