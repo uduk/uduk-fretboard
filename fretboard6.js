@@ -81,7 +81,7 @@ UdukFretboard6 = function(x, y, tuning) {
     text.content = tuning[i];
   }
 
-  // dots
+  /* Dots */
   var d1 = 100;
   var d2 = 580;
   for (var i = 1; i < 5; i++, d1 += 80, d2 += 80) {
@@ -94,19 +94,19 @@ UdukFretboard6 = function(x, y, tuning) {
     myCircle.fillColor = 'grey';
   }
 
-    // 12
-    var myCircle = new Path.Circle(new Point(460+posX, 46+posY), 10);
-    myCircle.fillColor = 'grey';
-    var myCircle = new Path.Circle(new Point(460+posX, 106+posY), 10);
-    myCircle.fillColor = 'grey';
+  /* 12 */
+  var myCircle = new Path.Circle(new Point(460+posX, 46+posY), 10);
+  myCircle.fillColor = 'grey';
+  var myCircle = new Path.Circle(new Point(460+posX, 106+posY), 10);
+  myCircle.fillColor = 'grey';
 
-    //	24
-    var myCircle = new Path.Circle(new Point(940+posX, 46+posY), 10);
-    myCircle.fillColor = 'black';
-    var myCircle = new Path.Circle(new Point(940+posX, 106+posY), 10);
-    myCircle.fillColor = 'black';
+  /*	24 */
+  var myCircle = new Path.Circle(new Point(940+posX, 46+posY), 10);
+  myCircle.fillColor = 'black';
+  var myCircle = new Path.Circle(new Point(940+posX, 106+posY), 10);
+  myCircle.fillColor = 'black';
 
-  // Powered: 
+  /* Powered: */
   var uduk = new PointText(80, 20);
   uduk.content = 'http://uduk.org';
   uduk.style = {
