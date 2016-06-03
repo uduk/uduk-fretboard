@@ -14,7 +14,7 @@ o   o o-o   o   o o  o
 
 Example usage:
 
-<pre>
+```javascript
 <script type="text/paperscript" canvas="Canvas6">
   var f = UdukFretboard6(100, 100, ["e", "B", "G", "D", "A", "E"]);
   var n = drawNote6(f, 6, 7, "1");
@@ -41,6 +41,7 @@ Example usage:
  <canvas id="Canvas7" width="1100" height="380" style="border:1px solid #333333;"></canvas>
  <canvas id="Canvas8" width="1100" height="380" style="border:1px solid #333333;"></canvas>
 ...
+```
 </pre>
 
 Direct drawing [x, y] measurement 
