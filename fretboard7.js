@@ -33,7 +33,7 @@ UdukFretboard7 = function(posX, posY, tuning) {
 
   /* Fret */
   for (var i = 1; i < 24; i++) {
-    x = (i * 40) + posX;
+    var x = (i * 40) + posX;
     var s = new Path.Line({
       from: [x, posY],
       to: [x, height+posY],
@@ -107,14 +107,14 @@ UdukFretboard7 = function(posX, posY, tuning) {
   myCircle.fillColor = 'black';
 
   /* Powered: */
-  var text = new PointText(80, 20);
-  text.content = 'http://uduk.org';
-  text.style = {
-  fontFamily: 'Silom',
-  fontWeight: 'bold',
-  fontSize: 16,
-  fillColor: 'grey',
-  justification: 'center'
+  var uduk = new PointText(80, 20);
+  uduk.content = 'http://uduk.org';
+  uduk.style = {
+    fontFamily: 'Silom',
+    fontWeight: 'bold',
+    fontSize: 16,
+    fillColor: 'grey',
+    justification: 'center'
   };
 
   var ret = [posX, posY];
@@ -179,4 +179,3 @@ drawBlock7 = function(pos, start, n) {
   block.opacity = 0.16;
   return block;
 };
-

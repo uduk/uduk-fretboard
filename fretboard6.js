@@ -33,7 +33,7 @@ UdukFretboard6 = function(posX, posY, tuning) {
 
   /* Fret */
   for (var i = 1; i < 24; i++) {
-    x = (i * 40) + posX;
+    var x = (i * 40) + posX;
     var s = new Path.Line({
       from: [x, posY],
       to: [x, height+posY],
