@@ -76,7 +76,7 @@ UdukFretboard8 = function(posX, posY, tuning) {
     var text = new PointText(new Point(posX - 40, (y+posY) - 30 ));
     text.justification = 'center';
     text.fontFamily = 'Silom';
-    text.fillColor = 'black';
+    text.fillColor = 'grey';
     text.content = tuning[i];
   }
 
