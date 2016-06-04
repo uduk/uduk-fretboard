@@ -65,7 +65,7 @@ UdukFretboard8 = function(posX, posY, tuning) {
     var s = new Path.Line({
       from: [0+posX, y+posY],
       to: [width+posX, y+posY],
-      strokeColor: 'grey'
+      strokeColor: 'black'
     });
   }
 
