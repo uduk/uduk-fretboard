@@ -48,14 +48,14 @@ UdukFretboard7 = function(posX, posY, tuning) {
     var bottom = new PointText(new Point(z, posY + height + 30));
     bottom.justification = 'center';
     bottom.fontFamily = 'Silom';
-    bottom.fillColor = 'black';
+    bottom.fillColor = 'grey';
     bottom.content = i + '';
 
     /* Top */
     var top = new PointText(new Point(z, posY - 20));
     top.justification = 'center';
     top.fontFamily = 'Silom';
-    top.fillColor = 'black';
+    top.fillColor = 'grey';
     top.content = i + '';
   }
 
