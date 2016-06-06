@@ -8,6 +8,10 @@ o   o o-o   o   o o  o
 
 */
 
+var UdukFretboard6_strings = [];
+var UdukFretboard6_frets = [];
+var UdukFretboard6_dots = [];
+
 UdukFretboard6 = function(posX, posY, tuning) {
 
   var width = 960;
@@ -57,6 +61,9 @@ UdukFretboard6 = function(posX, posY, tuning) {
     top.fontFamily = 'Silom';
     top.fillColor = 'grey';
     top.content = i + '';
+
+    UdukFretboard6_frets.push(top);
+    UdukFretboard6_frets.push(bottom);
   }
 
   /* String */
@@ -77,6 +84,7 @@ UdukFretboard6 = function(posX, posY, tuning) {
     text.fontFamily = 'Silom';
     text.fillColor = 'grey';
     text.content = tuning[i];
+    UdukFretboard6_strings.push(text);
   }
 
   /* Dots */
@@ -84,25 +92,33 @@ UdukFretboard6 = function(posX, posY, tuning) {
   var d2 = 580;
   for (var i = 1; i < 5; i++, d1 += 80, d2 += 80) {
     /* 3, 5, 7, 9 */
-    var myCircle = new Path.Circle(new Point(d1+posX, 76+posY), 10);
-    myCircle.fillColor = 'grey';
+    var myCircle1 = new Path.Circle(new Point(d1+posX, 76+posY), 10);
+    myCircle1.fillColor = 'grey';
 
     /* 15. 17, 19, 21 */
-    var myCircle = new Path.Circle(new Point(d2+posX, 76+posY), 10);
-    myCircle.fillColor = 'grey';
+    var myCircle2 = new Path.Circle(new Point(d2+posX, 76+posY), 10);
+    myCircle2.fillColor = 'grey';
+
+    UdukFretboard6_dots.push(myCircle1);
+    UdukFretboard6_dots.push(myCircle2);
   }
 
   /* 12 */
-  var myCircle = new Path.Circle(new Point(460+posX, 46+posY), 10);
-  myCircle.fillColor = 'grey';
-  var myCircle = new Path.Circle(new Point(460+posX, 106+posY), 10);
-  myCircle.fillColor = 'grey';
+  var myCircle1 = new Path.Circle(new Point(460+posX, 46+posY), 10);
+  myCircle1.fillColor = 'grey';
+  var myCircle2 = new Path.Circle(new Point(460+posX, 106+posY), 10);
+  myCircle2.fillColor = 'grey';
 
   /* 24 */
-  var myCircle = new Path.Circle(new Point(940+posX, 46+posY), 10);
-  myCircle.fillColor = 'black';
-  var myCircle = new Path.Circle(new Point(940+posX, 106+posY), 10);
-  myCircle.fillColor = 'black';
+  var myCircle3 = new Path.Circle(new Point(940+posX, 46+posY), 10);
+  myCircle3.fillColor = 'black';
+  var myCircle4 = new Path.Circle(new Point(940+posX, 106+posY), 10);
+  myCircle4.fillColor = 'black';
+
+  UdukFretboard6_dots.push(myCircle1);
+  UdukFretboard6_dots.push(myCircle2);
+  UdukFretboard6_dots.push(myCircle3);
+  UdukFretboard6_dots.push(myCircle4);
 
   /* Powered: */
   var uduk = new PointText(80, 20);
@@ -118,6 +134,31 @@ UdukFretboard6 = function(posX, posY, tuning) {
   var ret = [posX, posY];
   return ret;
 
+};
+
+blindMode6 = function(blind) {
+  if (blind) {
+    for (var i = 0; i < UdukFretboard6_frets.length; i++) {
+      UdukFretboard6_frets[i].visible = false;
+    }
+    for (var i = 0; i < UdukFretboard6_dots.length; i++) {
+      UdukFretboard6_dots[i].visible = false;
+    }
+    for (var i = 0; i < UdukFretboard6_strings.length; i++) {
+      UdukFretboard6_strings[i].visible = false;
+    }
+  }
+  else {
+    for (var i = 0; i < UdukFretboard6_frets.length; i++) {
+      UdukFretboard6_frets[i].visible = true;
+    }
+    for (var i = 0; i < UdukFretboard6_dots.length; i++) {
+      UdukFretboard6_dots[i].visible = true;
+    }
+    for (var i = 0; i < UdukFretboard6_strings.length; i++) {
+      UdukFretboard6_strings[i].visible = true;
+    }
+  }
 };
 
 drawNote6 = function(pos, s, f, marker) {
